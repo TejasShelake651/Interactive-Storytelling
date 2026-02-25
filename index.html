@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Storytelling</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo">StoryFlux</h1>
+            <nav class="navbar">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Stories</a>
+                <a href="#" class="nav-link" id="aboutBtn">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Story Selection Menu -->
+        <div class="story-menu" id="storyMenu">
+            <div class="menu-wrapper">
+                <h2 class="menu-title">✨ Choose Your Adventure ✨</h2>
+                <p class="menu-subtitle">Select a story to begin your journey...</p>
+                <div class="stories-grid">
+                    <button class="story-card" data-story="1">
+                        <h3>🌿 The Lost Forest</h3>
+                        <p>Awaken in a mysterious jungle filled with ancient secrets and magical creatures.</p>
+                    </button>
+                    <button class="story-card" data-story="2">
+                        <h3>🏰 The Kingdom's Secret</h3>
+                        <p>Discover hidden truths within a royal castle and change the kingdom's fate.</p>
+                    </button>
+                    <button class="story-card" data-story="3">
+                        <h3>🌙 Moon's Whisper</h3>
+                        <p>Follow magical moonlight into a world where dreams come alive.</p>
+                    </button>
+                    <button class="story-card" data-story="4">
+                        <h3>⚔️ Warrior's Quest</h3>
+                        <p>Embark on an epic journey to save the realm from darkness.</p>
+                    </button>
+                    <button class="story-card" data-story="5">
+                        <h3>🎭 The Enchanted Theater</h3>
+                        <p>Step into a magical theater where every performance changes reality.</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Story Display -->
+        <div class="story-wrapper">
+            <!-- Story Display -->
+            <section class="story-section">
+                <div class="story-header">
+                    <h2 class="story-title" id="storyTitle">Your Adventure</h2>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressBar"></div>
+                    </div>
+                </div>
+
+                <div class="story-content">
+                    <div class="story-text" id="storyText">
+                        <p>Welcome to your interactive adventure. Click a choice below to begin your journey...</p>
+                    </div>
+
+                    <!-- Story Image -->
+                    <div class="story-image-container">
+                        <img id="storyImage" src="jungleStory.png" alt="Story Scene" class="story-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Choices Section -->
+            <section class="choices-section">
+                <h3 class="choices-title">What do you do?</h3>
+                <div class="choices-container" id="choicesContainer">
+                    <button class="choice-btn" data-choice="1">Choice 1</button>
+                    <button class="choice-btn" data-choice="2">Choice 2</button>
+                    <button class="choice-btn" data-choice="3">Choice 3</button>
+                </div>
+            </section>
+
+            <!-- Story Stats -->
+            <section class="stats-section">
+                <div class="stat-item">
+                    <h4 class="stat-label">Current Scene</h4>
+                    <p class="stat-value" id="sceneCounter">1</p>
+                </div>
+                <div class="stat-item">
+                    <h4 class="stat-label">Choices Made</h4>
+                    <p class="stat-value" id="choiceCounter">0</p>
+                </div>
+                <div class="stat-item">
+                    <h4 class="stat-label">Story Path</h4>
+                    <p class="stat-value" id="pathDisplay">Start</p>
+                </div>
+            </section>
+
+            <!-- Control Buttons -->
+            <section class="controls-section">
+                <button class="control-btn restart-btn" id="restartBtn">Restart Story</button>
+                <button class="control-btn menu-btn" id="menuBtn">Back to Menu</button>
+                <button class="control-btn view-btn" id="viewStoryBtn">View Complete Story</button>
+            </section>
+        </div>
+    </main>
+
+    <!-- Story Viewer Modal -->
+    <div class="story-viewer" id="storyViewer">
+        <div class="viewer-content">
+            <button class="close-btn" id="closeViewerBtn">&times;</button>
+            <h2 class="viewer-title">Your Story Journey</h2>
+            <div class="viewer-text" id="viewerText"></div>
+            <button class="control-btn" id="closeViewer2Btn">Close</button>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div class="story-viewer" id="aboutModal">
+        <div class="viewer-content">
+            <button class="close-btn" id="closeAboutBtn">&times;</button>
+            <h2 class="viewer-title">🌟 About StoryFlux</h2>
+            <div class="viewer-text">
+                <p>Welcome to <strong>StoryFlux</strong> — a place where stories don't just get read, they get <em>experienced</em>.</p>
+                <p>We built this platform for people who love imagination, creativity, and adventure. Instead of following a fixed storyline, here <strong>you control the journey</strong>. Your choices shape the characters, the events, and the ending — making every story unique for every reader.</p>
+                <p>Whether you want to explore fantasy worlds, solve mysteries, experience emotional journeys, or create your own story paths, this platform lets you <strong>become part of the story</strong> instead of just watching it.</p>
+                <p>🎭 Choose from multiple adventures, each with branching paths and multiple endings. Every decision matters!</p>
+            </div>
+            <button class="control-btn" id="closeAbout2Btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 StoryFlux. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
