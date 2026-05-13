@@ -1,3 +1,14 @@
+## Fonts Used
+
+The main font stack for this project is:
+
+- **Comic Sans MS**
+- **Chalkboard SE**
+- **Trebuchet MS**
+- **cursive**
+- **sans-serif**
+
+These fonts give the project a playful and friendly look. The browser will use the first available font from this list.
 # Interactive Storytelling
 
 Hey! This is a cool interactive storytelling project. It's a web app where you dive into epic stories with kingdoms, warriors, magic, jungles and more. Built with HTML, CSS, and JavaScript - super simple, just open in your browser.
